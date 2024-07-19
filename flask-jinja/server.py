@@ -21,7 +21,7 @@ def hello():
     return render_template("index.html", num=random_number, current_year=current_year, me=me)
 
 
-@app.route("/<name>")
+@app.route("/guess/<name>")
 def check_name(name):
     params = {
         "name": name
