@@ -38,8 +38,8 @@ def check_name(name):
 
     return render_template("indexname.html", name=name.title(), age=age, gender=gender)
 
-@app.route("/blog")
-def blog():
+@app.route("/blog/<num>")
+def get_blog(num):
     blog_url = "https://api.npoint.io/c790b4d5cab58020d391"
     response = requests.get(blog_url)
     all_posts = response.json()
